@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CellStart | ChronoNAD+ Cellular Renewal</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@700;800&family=Poppins:wght@600;700&family=Source+Sans+Pro:wght@400&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Brand Colors and Fonts --- */
+        :root {
+            --color-header: #002f5c; /* Dark Blue [cite: 20] */
+            --color-body-text: #0057a6; /* Medium Blue [cite: 25] */
+            --color-light-accent: #e0e0f0;
+            --color-cta: #00ffaa; /* Fictional CTA for contrast */
+            --font-header: 'Cabin', sans-serif; /* Website Header Font [cite: 20] */
+            --font-marketing: 'Poppins', sans-serif; /* Marketing Header Font [cite: 20] */
+            --font-body: 'Source Sans Pro', sans-serif; /* Body Text Font [cite: 25] */
+        }
+
+        /* --- Global & Base Styles --- */
+        body {
+            font-family: var(--font-body);
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: var(--color-body-text);
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        h1, h2, h3 {
+            font-family: var(--font-marketing);
+            font-weight: 700;
+            color: var(--color-header);
+            line-height: 1.15;
+            margin-bottom: 0.5em;
+        }
+        p {
+            margin-top: 0;
+        }
+
+        /* --- CTA Styling --- */
+        .cta-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--color-header);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-family: var(--font-marketing);
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #00458f;
+        }
+
+        /* --- Header/Hero Section --- */
+        #hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 0;
+            min-height: 400px;
+            background-color: #f7f7f7;
+            border-bottom: 5px solid #002f5c;
+        }
+        .hero-text {
+            max-width: 50%;
+        }
+        .hero-text h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-family: var(--font-header);
+        }
+        .hero-text p {
+            font-size: 1.15rem;
+            margin-bottom: 30px;
+        }
+        .hero-product-image {
+            max-width: 40%;
+            text-align: center;
+            /* Placeholder for image styling based on ChronoNAD+ product  */
+        }
+        .product-placeholder {
+            width: 200px;
+            height: 300px;
+            background-color: #c9e0ff;
+            border-radius: 10px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: var(--color-header);
+            border: 2px dashed var(--color-header);
+        }
+
+        /* --- Custom Section 1: The Cellular Fuel --- */
+        #cellular-fuel {
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        #cellular-fuel h2 {
+            font-size: 2.2rem;
+            margin-bottom: 50px;
+        }
+        .fuel-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            text-align: left;
+        }
+        .fuel-card {
+            padding: 20px;
+            border-top: 4px solid var(--color-body-text);
+        }
+        .fuel-card h3 {
+            font-size: 1.3rem;
+        }
+        .fuel-card p {
+            font-size: 0.95rem;
+        }
+        .icon {
+            font-size: 2rem;
+            color: var(--color-header);
+            margin-bottom: 10px;
+            /* Using simple text icons since no external CDN allowed */
+        }
+
+        /* --- Custom Section 2: The 1.7x Advantage (Science & Data) --- */
+        #advantage {
+            padding: 60px 0 80px;
+            background-color: #e6f0ff; /* Light, calming background */
+            border-top: 1px solid #c9e0ff;
+        }
+        .advantage-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+        }
+        .advantage-text {
+            max-width: 55%;
+        }
+        .advantage-text h2 {
+            font-size: 2.2rem;
+            color: var(--color-body-text);
+        }
+        .advantage-text p {
+            font-family: var(--font-body); /* Source Sans Pro Regular [cite: 25] */
+            font-size: 1.05rem;
+        }
+        .data-visual {
+            max-width: 45%;
+            min-height: 250px;
+            background-color: #d1e2f7;
+            border-radius: 8px;
+            border: 1px solid #a0a0ff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-weight: 700;
+            color: var(--color-header);
+            /* Placeholder for data visualization image [cite: 35] */
+        }
+
+        /* --- Footer --- */
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.85rem;
+            color: #6a6a80;
+            background-color: #f0f0f0;
+        }
+
+        /* --- Responsiveness (for technical knowledge gauge) --- */
+        @media (max-width: 768px) {
+            #hero {
+                flex-direction: column;
+                text-align: center;
+                min-height: auto;
+                padding: 40px 20px;
+            }
+            .hero-text {
+                max-width: 100%;
+                margin-bottom: 40px;
+            }
+            .hero-product-image {
+                max-width: 60%;
+            }
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            .advantage-content {
+                flex-direction: column;
+            }
+            .advantage-text {
+                max-width: 100%;
+            }
+            .data-visual {
+                max-width: 100%;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <nav style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0;">
+                <div style="font-family: var(--font-header); font-size: 1.8rem; font-weight: 800; color: var(--color-header);">CellStart</div>
+                <a href="#purchase" class="cta-button" style="font-size: 0.9rem;">Buy ChronoNAD+</a>
+            </nav>
+        </header>
+    </div>
+
+    <section id="hero">
+        <div class="container" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+            <div class="hero-text">
+                <h1>Unlock Your Longevity. Power Your Performance.</h1>
+                <p>The **ChronoNAD+** supplement  is designed to reverse cellular decline, boosting NAD+ levels  and restoring vibrant energy. Experience life renewed, every single day.</p>
+                <a href="#purchase" class="cta-button" style="margin-right: 15px;">Buy Now</a>
+                <a href="#science" class="cta-button" style="background-color: transparent; color: var(--color-header); border: 2px solid var(--color-header); box-shadow: none;">Learn More</a>
+            </div>
+            <div class="hero-product-image">
+                <div class="product-placeholder">
+                    <p style="font-size: 1.2rem; font-weight: 700;">ChronoNAD+</p>
+                    <p style="margin-top: 5px;">[Product Image Placeholder]</p>
+                    <p style="margin-top: 15px; font-size: 0.7rem;">Dietary Supplement</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cellular-fuel">
+        <div class="container">
+            <h2>Why NAD+ is Your Cellular Fuel</h2>
+            <p style="max-width: 700px; margin: 0 auto 50px; font-size: 1.1rem; color: #4a4a60;">CellStart works at the fundamental biological level[cite: 30]. Your cellular function drives everything from energy to repair.</p>
+            
+            <div class="fuel-grid">
+                <div class="fuel-card">
+                    <div class="icon">⚡</div>
+                    <h3>DNA Repair</h3>
+                    <p>NAD+ helps your body's natural processes fix damage to DNA, helping your body stay healthy[cite: 30].</p>
+                </div>
+                <div class="fuel-card">
+                    <div class="icon">🔋</div>
+                    <h3>Energy Production</h3>
+                    <p>NAD+ is a key driver of metabolism, helping your body turn food into usable energy for every cell[cite: 30].</p>
+                </div>
+                <div class="fuel-card">
+                    <div class="icon">🛡️</div>
+                    <h3>Cellular Defense</h3>
+                    <p>NAD+ activates important "longevity" genes that help your body fight off stress and maintain overall cellular wellness[cite: 30].</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="advantage">
+        <div class="container">
+            <div class="advantage-content">
+                <div class="advantage-text">
+                    <h2>The 1.7x Advantage: Enhanced Cellular Health & Defense</h2>
+                    <p>Research shows that combining NAD+ precursors with **Resveratrol** can boost NAD+ levels in the body up to **1.7x higher** than using NAD+ alone[cite: 25].</p>
+                    <p>ChronoNAD+ is formulated with both compounds, leveraging synergistic science to maximize cellular function and activate "longevity genes"[cite: 36, 37, 38, 39].</p>
+                    <a href="#science-data" class="cta-button">View Clinical Data</a>
+                </div>
+                <div class="data-visual">
+                    <p>Data Visualization Placeholder: <br> "NAD+ ALONE" vs. "NAD+ with Resveratrol" [cite: 36, 37, 38, 39]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 CellStart, a Dispharm brand. | Scientific Wellness for Longevity.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
