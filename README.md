@@ -12,16 +12,6 @@ This repository contains a **self-contained, responsive HTML/CSS landing page mo
 
 The page is designed to meet the marketing goal of combining **scientific authority** with a clear, **conversion-focused layout**, specifically showcasing the benefits of NAD+ and the *1.7x Advantage* of the ChronoNAD+ formulation.
 
------
-
-## 🔗 Live Demo & Submission
-
-You can view the final, rendered output of the landing page directly via GitHub Pages.
-
-| Asset | Link |
-| :--- | :--- |
-| **Live Page URL** | **[INSERT YOUR GITHUB PAGES LIVE LINK HERE]** (e.g., `https://yourusername.github.io/cellstart-landing-page/`) |
-| **Code Source** | [Link to the `index.html` file in this repository] |
 
 -----
 
@@ -42,20 +32,5 @@ This mockup was developed to demonstrate knowledge in clean, semantic HTML struc
 
   * **HTML5** (Structure)
   * **CSS3** (Styling, including Flexbox and Grid for layout)
-  * **Google Fonts** (Cabin, Poppins, Source Sans Pro)
-
------
-
-## ⚙️ How to View Locally
-
-To view and inspect the code on your own machine:
-
-1.  **Clone the Repository:**
-    ```bash
-    git clone https://github.com/YourUsername/cellstart-landing-page.git
-    ```
-2.  **Navigate to the Directory:**
-    ```bash
-    cd cellstart-landing-page
-    ```
+  * **Google Fonts** (Cabin, Poppins, Source Sans
 3.  **Open the File:** Open the **`index.html`** file in your preferred web browser (e.g., Chrome, Firefox).
